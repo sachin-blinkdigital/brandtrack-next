@@ -7,7 +7,7 @@ import FilterButton from "../components/actions/FilterButton";
 
 import useFetch from "../hooks/useFetch";
 
-export default function Dashboard({ volumeData }) {
+export default function Index({ volumeData }) {
   const [activeTab, setactiveTab] = useState("instagram");
 
   const [searchVolume, setsearchVolume] = useState(null);

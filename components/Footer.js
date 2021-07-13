@@ -10,13 +10,25 @@ export default function Footer() {
         </a>{" "}
       </div>
       <div className="social">
-        <a href="http://facebook.com/" target="_blank" className="link">
+        <a
+          href="https://www.facebook.com/BlinkDigitalIndia/"
+          target="_blank"
+          className="link"
+        >
           <i className="fa fa-facebook" aria-hidden="true"></i>
         </a>
-        <a href="" target="_blank" className="link">
+        <a
+          href="https://www.instagram.com/blink.digital/"
+          target="_blank"
+          className="link"
+        >
           <i className="fa fa-instagram" aria-hidden="true"></i>
         </a>
-        <a href="" target="_blank" className="link">
+        <a
+          href="https://twitter.com/blink_india/"
+          target="_blank"
+          className="link"
+        >
           <i className="fa fa-twitter" aria-hidden="true"></i>
         </a>
       </div>

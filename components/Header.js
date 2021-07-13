@@ -4,6 +4,7 @@ import Notifications from "./header/Notifications";
 import Help from "./header/Help";
 import UserMenu from "./header/UserMenu";
 import Link from "next/link";
+import Image from "next/image";
 
 const BlinkLogo = require("../assets/images/blink_logo-min.png");
 
@@ -11,16 +12,23 @@ function Header({ sidebarOpen, setSidebarOpen }) {
   return (
     <header className="sticky top-0 bg-white border-b border-gray-200 z-30">
       <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 -mb-px">
-          <div className="flex">
+        <div className="flex justify-between h-16 -mb-px">
+          <div className="flex items-center">
             <a href="https://blinkdigital.in/" target="_blank">
-              <img
+              {/* <img
                 src={BlinkLogo}
                 className="object-contain md:object-scale-down blink-logo w-full mr-2"
                 alt="logo"
+              /> */}
+              <Image
+                src="/blink_logo-min.png"
+                alt="blink logo"
+                width="64"
+                height="64"
+                className="object-contain md:object-scale-down blink-logo w-full mr-2"
               />
             </a>
-            <div className="main-title">
+            <div className="main-title ml-2">
               <Link href="/">
                 <a>
                   <h2>Digital Presence Index</h2>

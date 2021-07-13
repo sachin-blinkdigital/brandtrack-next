@@ -8,7 +8,7 @@ import { formatNumber } from "../../utils/Utils";
 export default function Brand({ response }) {
   const brandData = response.data[0];
 
-  //console.log(brandData.heading);
+  //console.log(brandData);
   useEffect(() => {
     document.body.classList.add("bg-lgray");
     return () => {

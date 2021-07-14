@@ -15,11 +15,6 @@ function Header({ sidebarOpen, setSidebarOpen }) {
         <div className="flex justify-between h-16 -mb-px">
           <div className="flex items-center">
             <a href="https://blinkdigital.in/" target="_blank">
-              {/* <img
-                src={BlinkLogo}
-                className="object-contain md:object-scale-down blink-logo w-full mr-2"
-                alt="logo"
-              /> */}
               <Image
                 src="/blink_logo-min.png"
                 alt="blink logo"

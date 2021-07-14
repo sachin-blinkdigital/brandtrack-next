@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import DashboardCard05 from "../../components/dashboard/DashboardCard05";
+import DashboardCard05 from "@/components/dashboard/DashboardCard05";
 import ContentLoader from "react-content-loader";
 
-import { formatNumber } from "../../utils/Utils";
+import { formatNumber } from "@/utils/Utils";
 
 export default function Brand({ response }) {
   const brandData = response.data[0];
@@ -144,22 +144,26 @@ export default function Brand({ response }) {
 
 export async function getStaticPaths() {
   const res = await fetch("https://blinklocal.in/api/volume/");
-  const users = await res.json();
+  const brands = await res.json();
 
-  const paths = users?.data?.map((user) => ({
-    params: { id: user.id.toString() },
+  const paths = brands?.data?.map((brand) => ({
+    params: { id: brand.id.toString() },
   }));
 
   return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps(context) {
   // params contains the brand `id`.
   // If the route is like /brands/1, then params.id is 1
 
-  const brandRes = await fetch(`https://blinklocal.in/api/volume/${params.id}`);
+  const brandRes = await fetch(
+    `https://blinklocal.in/api/volume/${context.params.id}`
+  );
   const response = await brandRes.json();
 
-  // Pass post data to the page via props
+  //console.log(context);
+
+  // Pass data to the page via props
   return { props: { response } };
 }

@@ -81,12 +81,16 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
           {/* <h3 className="text-xs uppercase text-gray-500 font-semibold pl-3">Pages</h3> */}
           <ul className="mt-3">
             {/* Dashboard */}
-            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0`}>
+            <li
+              className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 text-white hover:text-gray-200 transition duration-200`}
+            >
               <Link href="/">
                 <a>Home</a>
               </Link>
             </li>
-            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0`}>
+            <li
+              className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 text-white hover:text-gray-200 transition duration-200`}
+            >
               <Link href="/brands/1019">
                 <a>KFC</a>
               </Link>
